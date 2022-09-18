@@ -1,0 +1,30 @@
+# Spring Boot configuration
+spring:
+  application:
+    name: fraud
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: root
+    password: root
+    url: "jdbc:postgresql://localhost:5432/fraud_check_history"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+# Server configuration
+server:
+  port: 8081 #set your port
+
+eureka:
+  client:
+    service-url:
+      defaulZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+
+

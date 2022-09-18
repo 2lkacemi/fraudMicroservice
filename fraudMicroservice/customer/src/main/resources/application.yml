@@ -1,0 +1,28 @@
+# Spring Boot configuration
+spring:
+  application:
+    name: customer
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: root
+    password: root
+    url: "jdbc:postgresql://localhost:5432/customer"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8080 #set your port
+
+eureka:
+  client:
+    service-url:
+      defaulZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+
