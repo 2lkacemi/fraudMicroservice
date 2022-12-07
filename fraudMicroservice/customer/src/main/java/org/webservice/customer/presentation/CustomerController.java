@@ -1,6 +1,6 @@
-package com.webservice.customer.presentation;
+package org.webservice.customer.presentation;
 
-import com.webservice.customer.business.CustomerService;
+import org.webservice.customer.business.CustomerService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +18,7 @@ public class CustomerController {
 
     @PostMapping
     public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRegistrationRequest){
-        customerService.registerCostumer(customerRegistrationRequest);
+        customerService.registerCustomer(customerRegistrationRequest);
         log.info("new customer registration {}", customerRegistrationRequest);
-
     }
 }

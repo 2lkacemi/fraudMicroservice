@@ -1,4 +1,4 @@
-package com.webservice.customer.persistence;
+package org.webservice.customer.persistence;
 
 
 import lombok.AllArgsConstructor;

@@ -1,9 +1,8 @@
-package com.webservice.customer.presentation;
+package org.webservice.customer.presentation;
 
 public record CustomerRegistrationRequest(
         String firstName,
         String lastName,
-        String email
-) {
+        String email) {
 
 }
