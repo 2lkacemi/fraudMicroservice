@@ -1,12 +1,12 @@
 # Spring Boot configuration
 spring:
   application:
-    name: customer
+    name: notification
   datasource:
     driver-class-name: org.postgresql.Driver
     username: root
     password: root
-    url: "jdbc:postgresql://localhost:5432/customer"
+    url: "jdbc:postgresql://localhost:5432/notification"
   jpa:
     properties:
       hibernate:
@@ -15,8 +15,9 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+# Server configuration
 server:
-  port: 8080 #set your port
+  port: 8082 #set your port
 
 eureka:
   client:
@@ -24,5 +25,6 @@ eureka:
       defaulZone: http://localhost:8761/eureka
     fetch-registry: true
     register-with-eureka: true
+
 
 
